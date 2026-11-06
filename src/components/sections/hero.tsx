@@ -4,7 +4,7 @@ import { Typing } from "../typing";
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-20">
+    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20">
       {/* Fundo */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="bg-grid absolute inset-0" />
@@ -13,16 +13,16 @@ export function Hero() {
         <div className="absolute bottom-0 inset-x-0 h-40 bg-linear-to-b from-transparent to-bg" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-6xl px-6">
+      <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6">
         <a
           href="#contato"
-          className="group mb-8 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/60 py-1 pr-3 pl-1.5 text-xs text-muted backdrop-blur transition-colors hover:border-accent-3/40 hover:text-fg"
+          className="group mb-6 inline-flex max-w-full items-center gap-2 rounded-full sm:mb-8 sm:gap-2.5 border border-line bg-surface/60 py-1 pr-3 pl-1.5 text-xs text-muted backdrop-blur transition-colors hover:border-accent-3/40 hover:text-fg"
         >
           <span className="flex items-center gap-1.5 rounded-full bg-accent-3/10 px-2 py-0.5 text-accent-3">
             <span className="size-1.5 animate-pulse-dot rounded-full bg-accent-3" />
             online
           </span>
-          Aberto a conversas e novos desafios
+          <span className="truncate">Aberto a novos desafios</span>
           <ArrowRight width={12} height={12} className="transition-transform group-hover:translate-x-0.5" />
         </a>
 
@@ -30,36 +30,36 @@ export function Hero() {
           <span className="text-dim">~/</span>olá, eu sou
         </p>
 
-        <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-balance sm:text-7xl md:text-8xl">
+        <h1 className="max-w-4xl text-[2.6rem] leading-[1.05] font-semibold tracking-tight text-balance sm:text-7xl md:text-8xl">
           <span className="text-gradient">{profile.name}</span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg text-muted text-pretty sm:text-xl">
+        <p className="mt-5 max-w-2xl text-base text-muted text-pretty sm:mt-6 sm:text-xl">
           <span className="text-fg">{profile.role}</span> no{" "}
           <span className="text-fg">{profile.company}</span>. {profile.headline}
         </p>
 
-        <div className="mt-8 flex h-7 items-center gap-2 text-base text-fg sm:text-lg">
+        <div className="mt-6 flex min-h-7 items-start gap-2 text-sm text-fg sm:mt-8 sm:items-center sm:text-lg">
           <span className="font-mono text-accent-3">❯</span>
           <Typing lines={profile.typing} />
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center gap-3">
+        <div className="mt-10 flex flex-wrap items-center gap-3 sm:mt-12">
           <a
             href="#projetos"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-transform hover:scale-[1.02]"
+            className="group relative inline-flex flex-1 items-center justify-center gap-2 overflow-hidden rounded-full bg-fg px-4 py-3 whitespace-nowrap sm:flex-none sm:px-6 text-sm font-medium text-bg transition-transform hover:scale-[1.02]"
           >
             Ver projetos
             <ArrowRight width={16} height={16} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-6 py-3 text-sm text-fg backdrop-blur transition-colors hover:border-accent/50"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-line bg-surface/60 px-4 py-3 whitespace-nowrap sm:flex-none sm:px-6 text-sm text-fg backdrop-blur transition-colors hover:border-accent/50"
           >
             Entrar em contato
           </a>
 
-          <div className="ml-1 flex items-center gap-1">
+          <div className="flex w-full items-center justify-center gap-1 sm:ml-1 sm:w-auto">
             {[
               { href: profile.github, label: "GitHub", Icon: GithubIcon },
               { href: profile.linkedin, label: "LinkedIn", Icon: LinkedinIcon },

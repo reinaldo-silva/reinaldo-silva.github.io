@@ -20,10 +20,10 @@ export function CopyEmail({ email }: { email: string }) {
     <button
       type="button"
       onClick={copy}
-      className="group inline-flex items-center gap-3 rounded-full border border-line bg-surface/80 py-2 pr-2 pl-5 font-mono text-sm text-fg backdrop-blur transition-colors hover:border-accent/50 sm:text-base"
+      className="group inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-surface/80 py-1.5 pr-1.5 pl-4 font-mono text-[13px] text-fg backdrop-blur transition-colors hover:border-accent/50 sm:gap-3 sm:py-2 sm:pr-2 sm:pl-5 sm:text-base"
     >
-      {email}
-      <span className="grid size-9 place-items-center rounded-full bg-white/5 text-muted transition-colors group-hover:text-fg">
+      <span className="truncate">{email}</span>
+      <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white/5 text-muted transition-colors group-hover:text-fg">
         {copied ? <CheckIcon width={16} height={16} className="text-accent-3" /> : <CopyIcon width={16} height={16} />}
       </span>
       <span className="sr-only" aria-live="polite">

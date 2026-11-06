@@ -11,22 +11,22 @@ const P = ({ children }: { children: ReactNode }) => <span className="text-dim">
 
 export function About() {
   return (
-    <section id="sobre" className="relative mx-auto max-w-6xl px-6 py-28">
+    <section id="sobre" className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
       <SectionHeading index="01" label="Sobre mim" title="Do código à liderança técnica." />
 
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-        <div className="space-y-5 text-lg leading-relaxed text-muted">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 [&>*]:min-w-0">
+        <div className="space-y-5 text-base leading-relaxed text-muted sm:text-lg">
           {profile.about.map((p, i) => (
             <Reveal key={i} delay={i * 100} as="p" className="text-pretty">
               {p}
             </Reveal>
           ))}
 
-          <Reveal delay={300} className="grid grid-cols-3 gap-3 pt-6">
+          <Reveal delay={300} className="grid grid-cols-3 gap-2 pt-4 sm:gap-3 sm:pt-6">
             {profile.stats.map((s) => (
-              <div key={s.k} className="rounded-xl border border-line bg-surface/60 p-4">
-                <p className="text-2xl font-semibold text-fg">{s.k}</p>
-                <p className="mt-1 text-xs text-dim">{s.v}</p>
+              <div key={s.k} className="rounded-xl border border-line bg-surface/60 p-3 sm:p-4">
+                <p className="text-xl font-semibold text-fg sm:text-2xl">{s.k}</p>
+                <p className="mt-1 text-[11px] leading-snug text-dim sm:text-xs">{s.v}</p>
               </div>
             ))}
           </Reveal>
@@ -40,7 +40,7 @@ export function About() {
               <span className="size-3 rounded-full bg-[#28c840]" />
               <span className="ml-3 font-mono text-xs text-dim">~/reinaldo — zsh</span>
             </div>
-            <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-6 text-fg">
+            <pre className="p-4 font-mono text-[12px] leading-6 break-words whitespace-pre-wrap text-fg sm:p-5 sm:text-[13px]">
               <code>
                 <span className="text-accent-3">❯</span> cat sobre.json{"\n"}
                 <P>{"{"}</P>

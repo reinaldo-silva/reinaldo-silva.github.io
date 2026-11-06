@@ -23,12 +23,12 @@ export default function Home() {
         <Contact />
       </main>
       <footer className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 font-mono text-xs text-dim sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-center font-mono text-xs text-dim sm:flex-row sm:px-6">
           <p>
             © <CurrentYear /> {profile.name}
           </p>
           <p>
-            Feito com Next.js + Tailwind · pressione <kbd className="rounded border border-line px-1">⌘K</kbd>
+            Feito com Next.js + Tailwind<span className="hidden md:inline"> · pressione <kbd className="rounded border border-line px-1">⌘K</kbd></span>
           </p>
         </div>
       </footer>

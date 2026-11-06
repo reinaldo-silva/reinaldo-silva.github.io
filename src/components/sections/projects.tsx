@@ -41,7 +41,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <Reveal delay={index * 120} className={project.featured ? "md:col-span-2" : ""}>
       <SpotlightCard glow={a.rgb} className="group h-full">
         <article
-          className={`flex h-full flex-col gap-6 p-6 sm:p-8 ${project.featured ? "md:grid md:grid-cols-2 md:gap-10" : ""}`}
+          className={`flex h-full flex-col gap-6 p-5 sm:p-8 ${project.featured ? "md:grid md:grid-cols-2 md:gap-10" : ""}`}
         >
           <div className="flex flex-col">
             <div className="mb-5 flex items-center justify-between">
@@ -59,7 +59,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               </a>
             </div>
 
-            <h3 className="text-2xl font-semibold tracking-tight text-fg">{project.name}</h3>
+            <h3 className="text-xl font-semibold tracking-tight text-fg sm:text-2xl">{project.name}</h3>
             <p className={`mt-1 text-sm ${a.text}`}>{project.tagline}</p>
             <p className="mt-4 leading-relaxed text-muted text-pretty">{project.description}</p>
 
@@ -111,14 +111,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export function Projects() {
   return (
-    <section id="projetos" className="relative mx-auto max-w-6xl px-6 py-28">
+    <section id="projetos" className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
       <SectionHeading
         index="02"
         label="Projetos"
         title="Coisas que construí."
         description="Projetos pessoais onde exploro arquitetura, tempo real e produto — do monorepo multi-tenant ao app P2P sem backend."
       />
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 [&>*]:min-w-0">
         {projects.map((p, i) => (
           <ProjectCard key={p.slug} project={p} index={i} />
         ))}

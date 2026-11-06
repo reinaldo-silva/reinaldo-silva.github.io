@@ -7,8 +7,8 @@ const all = stack.flatMap((g) => g.items);
 
 export function Stack() {
   return (
-    <section id="stack" className="relative py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="stack" className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <SectionHeading
           index="03"
           label="Stack"
@@ -18,7 +18,7 @@ export function Stack() {
       </div>
 
       {/* Marquee */}
-      <div className="relative mb-14 overflow-hidden border-y border-line bg-surface/40 py-5 [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)]">
+      <div className="relative mb-10 overflow-hidden sm:mb-14 border-y border-line bg-surface/40 py-5 [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)]">
         <div className="flex w-max animate-marquee gap-10 hover:[animation-play-state:paused]">
           {[...all, ...all].map((t, i) => (
             <span key={i} aria-hidden={i >= all.length} className="flex items-center gap-10 font-mono text-sm whitespace-nowrap text-muted">
@@ -29,10 +29,10 @@ export function Stack() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-4 px-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 px-5 sm:grid-cols-2 sm:gap-4 sm:px-6 lg:grid-cols-4">
         {stack.map((g, i) => (
           <Reveal key={g.group} delay={i * 90}>
-            <SpotlightCard className="h-full p-6">
+            <SpotlightCard className="h-full p-5 sm:p-6">
               <p className="mb-5 font-mono text-xs tracking-widest text-dim uppercase">
                 <span className="text-accent">0{i + 1}.</span> {g.group}
               </p>

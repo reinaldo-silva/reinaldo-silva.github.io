@@ -17,7 +17,7 @@ function Card({ title, children, delay }: { title: string; children: ReactNode; 
 
 export function Experience() {
   return (
-    <section id="experiencia" className="relative mx-auto max-w-6xl px-6 py-28">
+    <section id="experiencia" className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
       <SectionHeading
         index="04"
         label="Experiência"
@@ -25,12 +25,12 @@ export function Experience() {
         description="De desenvolvedor júnior a coordenador de times e engenheiro sênior no mercado financeiro."
       />
 
-      <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr]">
-        <ol className="relative border-l border-line pl-8 sm:pl-10">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr] [&>*]:min-w-0">
+        <ol className="relative ml-1 border-l border-line pl-6 sm:pl-10">
           {experience.map((e, i) => (
             <Reveal key={e.company + e.role} as="li" delay={i * 60} className="group relative pb-10 last:pb-0">
               <span
-                className={`absolute top-2 -left-[37px] size-[9px] rounded-full sm:-left-[45px] ${
+                className={`absolute top-2 -left-[29px] size-[9px] rounded-full sm:-left-[45px] ${
                   e.current ? "bg-accent-3 ring-4 ring-accent-3/15 animate-pulse-dot" : "bg-line ring-4 ring-bg group-hover:bg-accent"
                 }`}
               />

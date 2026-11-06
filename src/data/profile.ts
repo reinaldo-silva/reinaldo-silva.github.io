@@ -74,6 +74,7 @@ export const projects: Project[] = [
     ],
     stack: ["React", "Vite", "WebRTC", "Tailwind", "Vitest"],
     repo: "https://github.com/reinaldo-silva/secret-santa",
+    demo: "https://amigo-secreto-nine-livid.vercel.app/",
     accent: "violet",
   },
   {

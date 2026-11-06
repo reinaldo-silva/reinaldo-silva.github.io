@@ -71,7 +71,7 @@ export function Hero() {
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
                 aria-label={label}
-                className="grid size-11 place-items-center rounded-full text-muted transition-colors hover:bg-white/5 hover:text-fg"
+                className="grid size-11 place-items-center rounded-full text-muted transition-colors hover:bg-tint/5 hover:text-fg"
               >
                 <Icon />
               </a>

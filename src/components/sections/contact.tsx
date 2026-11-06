@@ -43,7 +43,7 @@ export function Contact() {
               rel="noreferrer"
               className="group flex items-center gap-4 rounded-2xl border border-line bg-surface/60 p-4 text-left backdrop-blur transition-all hover:-translate-y-0.5 hover:border-accent/40"
             >
-              <span className="grid size-11 place-items-center rounded-xl bg-white/5 text-fg">
+              <span className="grid size-11 place-items-center rounded-xl bg-tint/5 text-fg">
                 <Icon />
               </span>
               <span className="flex-1">

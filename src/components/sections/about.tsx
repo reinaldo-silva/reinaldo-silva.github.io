@@ -6,7 +6,7 @@ import { SectionHeading } from "../section-heading";
 
 const K = ({ children }: { children: ReactNode }) => <span className="text-accent-2">{children}</span>;
 const S = ({ children }: { children: ReactNode }) => <span className="text-accent-3">&quot;{children}&quot;</span>;
-const N = ({ children }: { children: ReactNode }) => <span className="text-[#f6c177]">{children}</span>;
+const N = ({ children }: { children: ReactNode }) => <span className="text-num">{children}</span>;
 const P = ({ children }: { children: ReactNode }) => <span className="text-dim">{children}</span>;
 
 export function About() {
@@ -33,7 +33,7 @@ export function About() {
         </div>
 
         <Reveal delay={150}>
-          <div className="overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl shadow-black/40">
+          <div className="overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl shadow-shade">
             <div className="flex items-center gap-2 border-b border-line bg-surface-2 px-4 py-3">
               <span className="size-3 rounded-full bg-[#ff5f57]" />
               <span className="size-3 rounded-full bg-[#febc2e]" />

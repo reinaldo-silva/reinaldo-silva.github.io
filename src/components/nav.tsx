@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { CommandIcon, GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 import { profile } from "@/data/profile";
 import { openCommandMenu } from "./command-menu";
+import { ThemeToggle } from "./theme";
 
 export const sections = [
   { id: "sobre", label: "Sobre" },
@@ -51,7 +52,7 @@ export function Nav() {
       <nav
         className={`flex w-full max-w-3xl items-center justify-between gap-2 rounded-full border px-2 py-2 transition-all duration-500 ${
           scrolled || menuOpen
-            ? "border-line bg-surface/70 shadow-[0_8px_40px_-12px_rgb(0_0_0/0.8)] backdrop-blur-xl"
+            ? "border-line bg-surface/70 shadow-[0_8px_40px_-12px_var(--shade)] backdrop-blur-xl"
             : "border-transparent bg-transparent"
         }`}
       >
@@ -77,7 +78,7 @@ export function Nav() {
                 }`}
               >
                 {active === s.id && (
-                  <span className="absolute inset-0 -z-10 rounded-full bg-white/[0.06] ring-1 ring-white/10" />
+                  <span className="absolute inset-0 -z-10 rounded-full bg-tint/[0.06] ring-1 ring-tint/10" />
                 )}
                 {s.label}
               </a>
@@ -85,31 +86,34 @@ export function Nav() {
           ))}
         </ul>
 
-        <button
-          type="button"
-          onClick={openCommandMenu}
-          className="hidden items-center md:flex gap-2 rounded-full border border-line bg-surface-2/80 px-3 py-1.5 text-xs text-muted transition-colors hover:border-accent/40 hover:text-fg"
-          aria-label="Abrir menu de comandos"
-        >
-          <CommandIcon width={14} height={14} />
-          <span className="font-mono">K</span>
-        </button>
+        <div className="flex items-center gap-1.5">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={openCommandMenu}
+            className="hidden h-8 items-center gap-2 rounded-full border border-line bg-surface-2/80 px-3 md:flex text-xs text-muted transition-colors hover:border-accent/40 hover:text-fg"
+            aria-label="Abrir menu de comandos"
+          >
+            <CommandIcon width={14} height={14} />
+            <span className="font-mono">K</span>
+          </button>
 
-        <button
-          type="button"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-          className="relative grid size-10 place-items-center rounded-full border border-line bg-surface-2/80 md:hidden"
-        >
-          <span
-            className={`absolute h-px w-4 bg-fg transition-transform duration-300 ${menuOpen ? "rotate-45" : "-translate-y-[3px]"}`}
-          />
-          <span
-            className={`absolute h-px w-4 bg-fg transition-transform duration-300 ${menuOpen ? "-rotate-45" : "translate-y-[3px]"}`}
-          />
-        </button>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            className="relative grid size-10 place-items-center rounded-full border border-line bg-surface-2/80 md:hidden"
+          >
+            <span
+              className={`absolute h-px w-4 bg-fg transition-transform duration-300 ${menuOpen ? "rotate-45" : "-translate-y-[3px]"}`}
+            />
+            <span
+              className={`absolute h-px w-4 bg-fg transition-transform duration-300 ${menuOpen ? "-rotate-45" : "translate-y-[3px]"}`}
+            />
+          </button>
+        </div>
       </nav>
 
       {/* Menu mobile */}

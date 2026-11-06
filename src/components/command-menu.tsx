@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 import { profile, projects } from "@/data/profile";
+import { toggleTheme } from "./theme";
 import { ArrowUpRight, CopyIcon, GithubIcon, HashIcon, LinkedinIcon, MailIcon, SearchIcon } from "./icons";
 
 const EVENT = "open-command-menu";
@@ -42,6 +43,13 @@ export function CommandMenu() {
         icon: <GithubIcon width={16} height={16} />,
         run: () => open(p.repo),
       })),
+      {
+        id: "theme",
+        label: "Alternar tema claro/escuro",
+        group: "Preferências",
+        icon: <span className="grid size-4 place-items-center text-xs">◐</span>,
+        run: toggleTheme,
+      },
       {
         id: "copy-email",
         label: "Copiar e-mail",
@@ -146,7 +154,7 @@ export function CommandMenu() {
           aria-label="Menu de comandos"
         >
           <div
-            className="w-full max-w-lg overflow-hidden rounded-2xl border border-line bg-surface/95 shadow-2xl shadow-black/60"
+            className="w-full max-w-lg overflow-hidden rounded-2xl border border-line bg-surface/95 shadow-2xl shadow-shade"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center gap-3 border-b border-line px-4">
@@ -183,7 +191,7 @@ export function CommandMenu() {
                           onMouseMove={() => setCursor(idx)}
                           onClick={() => select(item)}
                           className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-colors ${
-                            on ? "bg-white/[0.06] text-fg" : "text-muted"
+                            on ? "bg-tint/[0.06] text-fg" : "text-muted"
                           }`}
                         >
                           <span className={on ? "text-accent" : "text-dim"}>{item.icon}</span>

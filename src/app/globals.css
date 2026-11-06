@@ -67,6 +67,16 @@
   --animate-float: float 8s ease-in-out infinite;
   --animate-marquee: marquee 40s linear infinite;
   --animate-pulse-dot: pulse-dot 2s ease-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-wave: wave 2.4s ease-in-out infinite;
+
+  @keyframes wave {
+    0%, 60%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+  }
 
   @keyframes blink {
     50% {

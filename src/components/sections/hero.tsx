@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import { ArrowRight, GithubIcon, LinkedinIcon, MailIcon } from "../icons";
 import { Typing } from "../typing";
@@ -26,9 +27,35 @@ export function Hero() {
           <ArrowRight width={12} height={12} className="transition-transform group-hover:translate-x-0.5" />
         </a>
 
-        <p className="mb-4 font-mono text-sm text-accent">
-          <span className="text-dim">~/</span>olá, eu sou
-        </p>
+        <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
+          {/* Avatar com anel em gradiente */}
+          <div className="group relative size-16 shrink-0 sm:size-24">
+            <div
+              aria-hidden
+              className="absolute -inset-[3px] animate-spin-slow rounded-full bg-[conic-gradient(from_0deg,var(--accent),var(--accent-2),var(--accent-3),var(--accent))] opacity-90 blur-[0.5px]"
+            />
+            <div aria-hidden className="absolute -inset-px rounded-full bg-bg" />
+            <div className="relative size-full overflow-hidden rounded-full bg-accent">
+              <Image
+                src="/avatar.svg"
+                alt={`Avatar ilustrado de ${profile.shortName}`}
+                width={96}
+                height={96}
+                priority
+                className="size-full translate-y-[7%] scale-[1.35] transition-transform duration-500 group-hover:translate-y-[5%] group-hover:scale-[1.45] group-hover:-rotate-3"
+              />
+            </div>
+          </div>
+
+          {/* Balão de fala */}
+          <div className="relative rounded-2xl rounded-bl-md border border-line bg-surface/80 px-4 py-2.5 font-mono text-sm shadow-[0_8px_30px_-12px_var(--shade)] backdrop-blur">
+            <span className="text-dim">~/</span>
+            <span className="text-accent">olá, eu sou</span>{" "}
+            <span aria-hidden className="inline-block origin-[70%_70%] animate-wave">
+              👋
+            </span>
+          </div>
+        </div>
 
         <h1 className="max-w-4xl text-[2.6rem] leading-[1.05] font-semibold tracking-tight text-balance sm:text-7xl md:text-8xl">
           <span className="text-gradient">{profile.name}</span>

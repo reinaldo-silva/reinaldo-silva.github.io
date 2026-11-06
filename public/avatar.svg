@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Avatar ilustrado do Reinaldo">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ea8ff"/><stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient><clipPath id="c"><circle cx="200" cy="200" r="200"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="400" height="400" fill="url(#bg)"/><g fill="#fff" opacity="0.3"><circle cx="58" cy="92" r="5"/><circle cx="340" cy="80" r="4"/><circle cx="362" cy="134" r="3"/><circle cx="40" cy="162" r="3"/></g>
+    
+    <!-- ombros / jaqueta -->
+    <path d="M24 420 C34 336 104 304 160 296 L200 344 L240 296 C296 304 366 336 376 420 Z" fill="#17171d"/>
+    <path d="M168 294 L200 342 L232 294 C220 288 180 288 168 294 Z" fill="#f3f3f3"/>
+    <path d="M160 296 L200 344 L182 376 L126 316 Z" fill="#26262f"/>
+    <path d="M240 296 L200 344 L218 376 L274 316 Z" fill="#26262f"/>
+    <path d="M86 360 C100 336 120 324 142 318" stroke="#44444f" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- pescoço -->
+    <path d="M172 248 L172 300 Q200 318 228 300 L228 248 Z" fill="#a5694a"/>
+    <!-- orelhas -->
+    <ellipse cx="124" cy="196" rx="14" ry="21" fill="#c68b63"/>
+    <ellipse cx="276" cy="196" rx="14" ry="21" fill="#c68b63"/>
+    <!-- rosto -->
+    <path d="M126 176 C126 116 158 96 200 96 C242 96 274 116 274 176 C274 238 244 284 200 286 C156 284 126 238 126 176 Z" fill="#c68b63"/>
+    <!-- barba: maxilar inteiro, recorte nas bochechas -->
+    <path d="M128 196 C130 256 160 292 200 293 C240 292 270 256 272 196 C266 226 254 244 238 250 C222 242 178 242 162 250 C146 244 134 226 128 196 Z" fill="#1f1712"/>
+    <!-- bigode -->
+    <path d="M168 246 C180 234 194 236 200 241 C206 236 220 234 232 246 C220 244 210 247 200 249 C190 247 180 244 168 246 Z" fill="#1f1712"/>
+    <!-- boca: sorriso aberto -->
+    <path d="M174 256 Q200 262 226 256 Q220 278 200 279 Q180 278 174 256 Z" fill="#4a1a16"/>
+    <path d="M177 257 Q200 263 223 257 Q220 266 200 267 Q180 266 177 257 Z" fill="#fff"/>
+    <!-- cabelo: laterais curtas + cachos no topo -->
+    <path d="M122 190 C116 160 118 140 128 126 L150 132 C140 146 136 164 134 190 Z" fill="#2c211b"/>
+    <path d="M278 190 C284 160 282 140 272 126 L250 132 C260 146 264 164 266 190 Z" fill="#2c211b"/>
+    <g fill="#1a1310"><circle cx="132" cy="140" r="20"/><circle cx="140" cy="112" r="21"/><circle cx="160" cy="90" r="22"/><circle cx="186" cy="77" r="22"/><circle cx="214" cy="77" r="22"/><circle cx="240" cy="90" r="22"/><circle cx="260" cy="112" r="21"/><circle cx="268" cy="140" r="20"/><circle cx="158" cy="124" r="17"/><circle cx="184" cy="112" r="18"/><circle cx="216" cy="112" r="18"/><circle cx="242" cy="124" r="17"/><circle cx="200" cy="98" r="20"/><circle cx="172" cy="100" r="16"/><circle cx="228" cy="100" r="16"/></g>
+    <g fill="none" stroke="#3b2c23" stroke-width="4" stroke-linecap="round"><path d="M123 142 q9 -11 18 0" /><path d="M131 114 q9 -12 19 0" /><path d="M150 92 q10 -12 20 0" /><path d="M176 79 q10 -12 20 0" /><path d="M204 79 q10 -12 20 0" /><path d="M230 92 q10 -12 20 0" /><path d="M251 114 q9 -12 19 0" /><path d="M259 142 q9 -11 18 0" /></g>
+    
+    <!-- sobrancelhas -->
+    <path d="M148 160 Q166 149 186 156" stroke="#1a1310" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M214 156 Q234 149 252 160" stroke="#1a1310" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <!-- olhos -->
+    <ellipse cx="166" cy="190" rx="7" ry="8" fill="#1a120e"/>
+    <ellipse cx="234" cy="190" rx="7" ry="8" fill="#1a120e"/>
+    <circle cx="168.5" cy="187" r="2.4" fill="#fff"/><circle cx="236.5" cy="187" r="2.4" fill="#fff"/>
+    <!-- nariz -->
+    <path d="M204 200 Q208 220 197 227 Q203 232 211 228" stroke="#8a5638" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#e0766a" opacity="0.35"><ellipse cx="150" cy="222" rx="13" ry="8"/><ellipse cx="250" cy="222" rx="13" ry="8"/></g>
+    <!-- óculos -->
+    <g fill="#ffffff" fill-opacity="0.10" stroke="#2a2c33" stroke-width="4.5">
+      <circle cx="166" cy="190" r="27"/><circle cx="234" cy="190" r="27"/>
+    </g>
+    <g fill="none" stroke="#2a2c33" stroke-width="4.5" stroke-linecap="round">
+      <path d="M193 186 Q200 179 207 186"/><path d="M139 184 L124 180"/><path d="M261 184 L276 180"/>
+    </g>
+    <g stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.55"><path d="M148 176 Q154 168 163 167"/><path d="M216 176 Q222 168 231 167"/></g>
+    
+  </g>
+</svg>

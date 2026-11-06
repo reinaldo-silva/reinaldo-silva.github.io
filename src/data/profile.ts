@@ -8,6 +8,7 @@ export const profile = {
   location: "Bebedouro, SP — Brasil",
   birthDate: "1997-12-08", // AAAA-MM-DD — a idade é calculada automaticamente
   email: "reinaldo.silva.jr@outlook.com",
+  siteUrl: "https://reinaldo-silva.github.io",
   github: "https://github.com/reinaldo-silva",
   githubUser: "reinaldo-silva",
   linkedin: "https://www.linkedin.com/in/reinaldo-silvat",
